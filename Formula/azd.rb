@@ -8,6 +8,11 @@ class Azd < Formula
 
   def install
     bin.install "azd-darwin-amd64" => "azd"
+
+    ohai "The Azure Developer CLI collects usage data and sends that usage data to Microsoft in order to help us improve your experience."
+    ohai "You can opt-out of telemetry by setting the AZURE_DEV_COLLECT_TELEMETRY environment variable to 'no' in the shell you use."
+    ohai ""
+    ohai "Read more about Azure Developer CLI telemetry: https://github.com/Azure/azure-dev#data-collection"
   end
 
   test do
